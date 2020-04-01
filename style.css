@@ -56,6 +56,9 @@ nav{
     justify-content: space-between;
     padding: 30px 0;
 }
+.hamburger{
+    display: none;
+}
 ul{
     display: flex;
     list-style-type: none;
@@ -153,6 +156,7 @@ h1{
 }
 #how-we-work img{
     margin-bottom: -200px;
+    max-width: 100%;
 }
 /* SECTION WE'RE DIFFERENT */
 h2::before{
@@ -164,7 +168,8 @@ h2::before{
     top: 0;
 }
 h2{
-    padding:60px 0
+    padding:60px 0;
+    color: var(--neutral-color-vdviolet);
 }
 .different{
     display: flex;
@@ -240,6 +245,9 @@ footer .container{
     border-bottom: 1px solid var(--neutral-color-gviolet);
     padding: 80px 0 40px;
 }
+.footer-top ul{
+    padding: 0;
+}
 .social-link img:hover{
     cursor: pointer;
     color: var(--neutral-color-vdviolet);
@@ -265,6 +273,7 @@ footer .container{
 .footer-bottom li{
     list-style-type: none;
     margin: 10px 0;
+    padding:0;
 }
 .footer-link{
     text-transform: uppercase;
@@ -275,4 +284,140 @@ footer .container{
 }
 .footer-link:hover{
     text-decoration: underline
+}
+/* MOBILE RESPONSIVE */
+@media screen and (max-width: 768px){
+    body{
+        text-align: center;
+    }
+    h3, h4{
+        font-size: 2em;
+    }
+    /* HEADER SECTION */
+    nav{
+        flex-direction: column;
+    }
+    .hamburger{
+        display: flex;
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+    }
+    .hamburger:focus{
+        outline: none;
+    }
+    .nav-link.nav-plans{
+        display: inline-block;
+    }
+    nav {
+        flex-direction: row;
+    }
+    .nav-menu-links{
+        display: none;
+    }
+    /* WE'RE DIFFERENT SECTION */
+    .reverse-mobile{
+        flex-direction: column-reverse;
+    }
+    .container.reverse-mobile{
+        padding: 0;
+    }
+    .different{
+        flex-direction: column;
+    }
+    #border{
+        display: none;
+    }
+    #how-we-work h1{
+        font-size: 3.5em;
+    }
+    #how-we-work img{
+        margin-bottom: -3px;
+        width: 100%;
+        display: inline-block;
+    }
+    
+    #how-we-work p{
+        padding: 0 50px;
+        text-align: center;
+    }
+    
+    #how-we-work{
+        margin-bottom: 150px;
+        padding-top: 0;
+    }
+    
+    #how-we-work::after, #how-we-work::before{
+        display:none;
+    }
+    .mobile-shape{
+        background-image: url('/images/bg-pattern-intro-left-mobile.svg');
+        background-repeat: no-repeat;
+        background-size: 40%;
+        background-position: top left;
+        top: 0;
+    }
+    #we-different{
+        position: relative;
+    }
+    #we-different{
+        margin-bottom: 50px;
+    }
+    #we-different::before{
+        content: '';
+        position: absolute;
+        background-image: url('/images/bg-pattern-intro-right-mobile.svg');
+        background-repeat: no-repeat;
+        background-position: top right;
+        background-size: 40%;
+        width: 100%;
+        height: 100%;
+        top: -270px;
+        right: 0;
+    }
+    #we-different h2{
+        font-size: 3.5em;
+        padding: 30px 0 0 ;
+    }
+    #we-different h2::before{
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+    }
+    /* BANNER SECTION */
+    #banner{
+        padding: 0 20px;
+    }
+    .container.banner h3{
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 3em;
+        margin-top: 0;
+    }
+    .container.banner{
+        flex-direction: column;
+        background-image: url('/images/bg-pattern-how-we-work-mobile.svg');   
+        padding: 50px;
+    }
+    /* FOOTER SECTION */
+    footer{
+        background-image: url('/images/bg-pattern-footer-mobile.svg');
+        background-size: 100% auto;
+    }
+    .footer-top{
+        flex-direction: column;
+        max-width: 500px;
+        margin: auto;
+    }
+    .social li{
+        margin: 0 10px;
+    }
+    .footer-bottom{
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+    }
+    .footer-bottom div{
+        margin-top: 50px;
+    }
 }
