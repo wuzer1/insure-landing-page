@@ -43,6 +43,13 @@ body{
     font-family: 'Karla';
     font-size: 16px;
 }
+header{
+    position: fixed;
+    background-color: #fff;
+    color: #fff;
+    width: 100%;
+    z-index: 999;
+}
 .container{
     width: 1440px;
     max-width: 100%;
@@ -156,7 +163,7 @@ h1{
 }
 #how-we-work img{
     margin-bottom: -200px;
-    max-width: 100%;
+    /* max-width: 100%; */
 }
 /* SECTION WE'RE DIFFERENT */
 h2::before{
@@ -303,11 +310,49 @@ footer .container{
         border: 0;
         cursor: pointer;
     }
+    .close{
+        display: none;
+    }
+    .hamburger.show .open{
+        display: none;
+    }
+    .hamburger.show .close{
+        display: block;
+    }
     .hamburger:focus{
         outline: none;
     }
+    nav ul.show{
+        display: flex;
+        background-color: var(--neutral-color-vdviolet);
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 999;
+        width: 100%;
+        padding: 0;
+        margin-top: 90px;
+    }
+    nav ul li{
+        margin: 30px auto;
+    }
+    .nav-link{
+        color: var(--neutral-color-vlgray);
+    }
+    .nav-link:hover{
+        color:var(--neutral-color-gviolet)
+    }
     .nav-link.nav-plans{
         display: inline-block;
+        border-color: var(--neutral-color-vlgray);
+        color: var(--neutral-color-vlgray);
+    }
+    .nav-link.nav-plans:hover{
+        background-color: var(--neutral-color-vlgray);
+        color: var(--neutral-color-vdviolet);
     }
     nav {
         flex-direction: row;
