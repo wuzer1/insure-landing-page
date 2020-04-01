@@ -22,20 +22,24 @@
 *{
     box-sizing: border-box;
 }
-h1, h2, h3{
+h1, h2{
     font-family: 'DM Serif Display';
     font-size: 5em;
     padding: 0;
 }
-p{
-    letter-spacing: 2px;
-    text-align: justify;
+h3, h4{
+    font-family: 'DM Serif Display';
+    padding: 0;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+}
+html{
+    scroll-behavior: smooth;
 }
 /* NAVBAR */
 body{
     overflow-x: hidden;
     margin: 0;
-    scroll-behavior: smooth;
     font-family: 'Karla';
     font-size: 16px;
 }
@@ -44,6 +48,7 @@ body{
     max-width: 100%;
     margin: 0 auto;
     padding: 0 50px;
+    position: relative;
 }
 nav{
     display: flex;
@@ -115,6 +120,8 @@ h1{
     margin-bottom: 60px;
     padding-right: 30px;
     line-height: 25px;
+    letter-spacing: 2px;
+    text-align: justify;
 }
 
 #how-we-work::after{
@@ -145,4 +152,30 @@ h1{
 #how-we-work img{
     margin-bottom: -200px;
 }
-
+/* SECTION WE'RE DIFFERENT */
+h2::before{
+    content: '';
+    width: 190px;
+    height: 2px;
+    background-color: var(--neutral-color-gviolet);
+    position: absolute;
+    top: 0;
+}
+h2{
+    padding:60px 0
+}
+.different{
+    display: flex;
+    padding: 0px
+}
+.different p{
+    text-justify: justify;
+    line-height: 24px;
+    padding-right: 10px;
+    font-weight: 500;
+    color: var(--neutral-color-gviolet);
+    letter-spacing: 1px;
+}
+#we-different{
+    margin-bottom: 200px;
+}
