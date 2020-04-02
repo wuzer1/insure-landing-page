@@ -104,12 +104,13 @@ ul li{
 #how-we-work > div{
     display: flex;
     flex: 1;
+    padding-top: 100px;
 }
 .nav-link.nav-plans-light{
     color: var(--neutral-color-vlgray);
     border: 2px solid var(--neutral-color-vlgray);
     padding: 15px 40px;
-    z-index: 999;
+    z-index: 1;
     position: relative;
 }
 .nav-link.nav-plans-light:hover{
